@@ -1,0 +1,7 @@
+<svg width="251" height="293" viewBox="0 0 251 293" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="25" cy="259.5" rx="25" ry="33.5" fill="#D9D9D9"/>
+<ellipse cx="34.5" cy="259.5" rx="19.5" ry="28.5" fill="white" stroke="black" stroke-width="10"/>
+<path d="M35 255C32.2386 255 30 257.239 30 260C30 262.761 32.2386 265 35 265V255ZM35 265H95V255H35V265ZM145 215V139H135V215H145ZM95 265C122.614 265 145 242.614 145 215H135C135 237.091 117.091 255 95 255V265Z" fill="black"/>
+<circle cx="139.5" cy="108.5" r="25.5" fill="white" stroke="black" stroke-width="10"/>
+<path d="M58 5H225L245 212H38L58 5Z" fill="white" stroke="black" stroke-width="10"/>
+</svg>

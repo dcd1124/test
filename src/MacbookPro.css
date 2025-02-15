@@ -1,0 +1,365 @@
+/* 全局样式重置，去除默认的内外边距 */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #424242;
+}
+
+.macbook-pro {
+    background-color: #ffffff;
+    width: 1728px;
+    height: 1117px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.macbook-pro .overlap-wrapper {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.macbook-pro .overlap {
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.macbook-pro .wall {
+    height: 1117px;
+    left: 826px;
+    position: absolute;
+    top: 0;
+    width: 902px;
+    z-index: 4;
+}
+
+.macbook-pro .window {
+    height: 759px;
+    left: 974px;
+    position: absolute;
+    top: 0;
+    width: 754px;
+    z-index: 5;
+}
+
+.macbook-pro .light {
+    height: 293px;
+    left: 62px;
+    position: absolute;
+    top: 134px;
+    width: 251px;
+    z-index: 145;
+}
+
+.macbook-pro .time {
+    height: 256px;
+    left: 664px;
+    position: absolute;
+    top: 95px;
+    width: 288px;
+    z-index: 100;
+}
+
+.macbook-pro .timeSHADOW1 {
+    height: 246px;
+    left: 700px;
+    position: absolute;
+    top: 102px;
+    width: 257px;
+    z-index: 7;
+    opacity: 0; /* 初始透明度为 0 */
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+.macbook-pro .time-interaction-block {
+    height: 256px;
+    left: 664px;
+    position: absolute;
+    top: 95px;
+    width: 288px;
+    z-index: 140;
+    background-color: transparent;
+}
+
+.macbook-pro .dat-animation {
+    height: 303px;
+    width: 189px;
+    left: calc(664px + (288px - 189px) / 2);
+    top: calc(95px + 256px);
+    position: absolute;
+    z-index: 84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.macbook-pro .dat-animation-interaction-block {
+    height: 303px;
+    width: 189px;
+    left: calc(664px + (288px - 189px) / 2);
+    top: calc(95px + 256px);
+    position: absolute;
+    z-index: 114;
+    background-color: transparent;
+}
+
+.macbook-pro .dateSHADOW {
+    height: 195px; /* 原高度 303px 除以 2 */
+    width: 94px;   /* 原宽度 189px 除以 2 */
+    left: 850px; /* 更新 left 计算 */
+    top: 405px; /* 更新 top 计算，256px 除以 2 */
+    position: absolute;
+    z-index: 83;
+    opacity: 0; /* 初始透明度为 0 */
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+.macbook-pro .click-count {
+    position: absolute;
+    font-size: 129px;
+    color: black;
+    z-index: 9;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.3s;
+    transform: translate(-4px, 11px);
+    letter-spacing: -4px;
+}
+
+.macbook-pro .fade-out {
+    opacity: 0;
+}
+
+.macbook-pro .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.macbook-pro .man-animation {
+    position: absolute;
+    top: 500px;
+    left: -80px;
+    width: 1017px;
+    height: 816px;
+    transform: rotate(-20deg) scale(1.5);
+    transform-origin: center;
+    z-index: 90;
+}
+
+/* 调整 table 的 z-index 为 18，避免与其他元素冲突 */
+.macbook-pro .table {
+    height: 271px;
+    left: 342px;
+    position: absolute;
+    top: 846px;
+    width: 1081px;
+    z-index: 102;
+}
+
+/* 调整 computershadowNIGHT 的 z-index 为 17，确保在 table 下方 */
+.macbook-pro .computershadowNIGHT {
+    height: 269px;
+    left: 800px;
+    position: absolute;
+    top: 850px;
+    width: 320px;
+    z-index: 103;
+    opacity: 0; /* 初始透明度为 0 */
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+/* 调整 computer 的 z-index 为 19，确保在 table 和 computershadowNIGHT 上方 */
+.macbook-pro .computer {
+    height: 269px;
+    left: 800px;
+    position: absolute;
+    top: 765px;
+    width: 320px;
+    z-index: 148;
+}
+
+/* 调整 mouseSHADONIGHT 的 z-index 为 20，确保在其他元素上方 */
+.macbook-pro .mouseSHADONIGHT {
+    height: 70px;
+    left: 615px;
+    position: absolute;
+    top: 1050px;
+    width: 141px;
+    z-index: 106;
+    opacity: 0; /* 初始透明度为 0 */
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+/* 调整 mouse 的 z-index 为 21，确保在 mouseSHADONIGHT 上方 */
+.macbook-pro .mouse {
+    height: 70px;
+    left: 592px;
+    position: absolute;
+    top: 1034px;
+    width: 146px;
+    z-index: 147;
+}
+
+.macbook-pro .decoration {
+    height: 357px;
+    left: 1091px;
+    position: absolute;
+    top: 380px;
+    width: 171px;
+    z-index: 23;
+}
+
+/* 鼠标跟随的眼睛样式 */
+.eye {
+    width: 15px; 
+    height: 100px; 
+    background-color: black; 
+    border-radius: 100px; 
+    position: absolute;
+    z-index: 999; 
+    box-sizing: border-box; 
+}
+
+.macbook-pro .WHATCANISAY {
+    position: absolute;
+    top: 820px;
+    left: 200px;
+    width: calc(1017px / 2);
+    height: calc(816px / 2);
+    transform: rotate(-20deg) scale(calc(1 / 1.5));
+    transform-origin: center;
+    z-index: 120;
+}
+
+/* 新增的四个 SVG 元素样式 */
+.macbook-pro .windowSIDENIGHT {
+    position: absolute; 
+    top: -20px; 
+    left: 1050px; 
+    z-index: 206; 
+}
+
+.macbook-pro .windowfillSIDENIGHT {
+    position: absolute; 
+    top: -20px; 
+    left: 1050px; 
+    z-index: 205; 
+}
+
+.macbook-pro .mountainNIGHT {
+    position: absolute; 
+    top: 330px; 
+    left: 1060px; 
+    z-index: 202; 
+}
+
+.macbook-pro .sun {
+    position: absolute; 
+    top: 100px; 
+    left: 1400px; 
+    z-index: 201; 
+    opacity: 1;
+    transition: top 1s, opacity 1s; /* 太阳动画过渡 */
+}
+
+.macbook-pro .sun-animation {
+    animation: sunAnimation 2s ease-in-out; /* 太阳动画 */
+}
+
+@keyframes sunAnimation {
+    0% {
+        top: 100px;
+        opacity: 1;
+    }
+    50% {
+        top: 400px; 
+        opacity: 0;
+    }
+    51% {
+        top: 0px; 
+        opacity: 0;
+    }
+    100% {
+        top: 100px; 
+        opacity: 1;
+    }
+}
+
+/* 新增方形色块样式 */
+.macbook-pro .square-block {
+    position: absolute; 
+    top: 0px; 
+    left: 1050px; 
+    z-index: 200; /* 确保在 mountainNIGHT 后一层，为四个元素中最低层级 */
+    width: 800px; 
+    height: 730px; 
+    background-color: #ffffff; 
+    transition: background-color 0.8s ease; 
+}
+
+/* 新增方形色块样式 */
+.macbook-pro .mountainSHADO {
+  position: absolute; 
+  top: 380px; 
+  left: 1080px; 
+  z-index: 204; 
+}
+
+.macbook-pro .mountainSHADON00000 {
+  position: absolute; 
+  top: 380px; 
+  left: 1080px; 
+  z-index: 203; 
+}
+
+/* 在 MacbookPro.css 文件末尾添加 */
+.wall-transition {
+    transition: opacity 0.8s ease;
+    will-change: opacity;
+}
+
+.macbook-pro .wallday {
+    height: 1555px;
+    left: 300px;
+    position: absolute;
+    top: -300px;
+    width: 2000px;
+    z-index: 15;
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+.macbook-pro .SHADOWdaymain {
+    height: 1008px;
+    left: 60px;
+    position: absolute;
+    top: 120px;
+    width: 893px;
+    z-index: 119;
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}

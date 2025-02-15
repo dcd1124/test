@@ -1,0 +1,4 @@
+<svg width="797" height="797" viewBox="0 0 797 797" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H81C83.7614 0 86 2.23858 86 5V728H792C794.761 728 797 730.239 797 733V792C797 794.761 794.761 797 792 797H5C2.23858 797 0 794.761 0 792V5ZM10 10V787H787V738H81C78.2386 738 76 735.761 76 733V10H10Z" fill="black"/>
+<path d="M7 791L83 732" stroke="black" stroke-width="10" stroke-linejoin="round"/>
+</svg>

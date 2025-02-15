@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true, // 允许 CommonJS 和 ES 模块之间的互操作性
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "resolveJsonModule": true // 支持导入 JSON 文件
+  },
+  "include": ["vite.config.ts"]
+}
